@@ -12,13 +12,13 @@ public class FindShortestWord {
 
     public static void main(String[] args) {
         String testStr = "What could the shortest word be ?";
-        String shortest = FindShortest(testStr);
+        int shortest = FindShortest(testStr);
         System.out.println("Should print ?");
-        assert shortest.equals("?");
+        assert shortest == 1;
         System.out.println("The result is: " + shortest);
     }
 
-    public static String FindShortest(String str) {
+    public static int FindShortest(String str) {
         List<String> list = Arrays.asList(str.split("\\s"));
         String shortest = list.get(0);
         for (int i = 1; i < list.size(); i++) {
@@ -26,6 +26,6 @@ public class FindShortestWord {
                 shortest = list.get(i);
             }
         }
-        return shortest;
+        return shortest.length();
     }
 }
