@@ -6,11 +6,13 @@ public class StringEndsWith {
         String test2 = "java";
 
         System.out.println("Should print true");
-        assert StringEndsWith(test1, ending);
-        System.out.println("The result is: " + StringEndsWith(test1, ending));
+        boolean result = StringEndsWith(test1, ending);
+        assert result;
+        System.out.println("The result is: " + result);
         System.out.println("\n\n" + "Should print false");
-        assert !StringEndsWith(test2, ending);
-        System.out.println("The result is: " + StringEndsWith(test2, ending));
+        boolean result2 = StringEndsWith(test2, ending);
+        assert !result2;
+        System.out.println("The result is: " + result2);
 
     }
 
